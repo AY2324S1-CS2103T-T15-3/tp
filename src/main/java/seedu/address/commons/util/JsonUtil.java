@@ -87,7 +87,6 @@ public class JsonUtil {
     public static <T> void saveJsonFile(T jsonFile, Path filePath) throws IOException {
         requireNonNull(filePath);
         requireNonNull(jsonFile);
-
         serializeObjectToJsonFile(filePath, jsonFile);
     }
 
