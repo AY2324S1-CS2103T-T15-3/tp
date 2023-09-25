@@ -11,7 +11,7 @@
         "jane-doe": "Jane Doe",
         "johnny-doe": "Johnny Doe",
         "jean-doe": "Jean Doe",
-        "james-doe": "James Doe"
+        "kota-sudarshan-karanth": "Kota Sudarshan Karanth"
       },
       "headingKeywords": {}
     },
@@ -140,6 +140,14 @@
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/sudarshan2401.md",
+      "title": "Sudarshan's Project Portfolio Page",
+      "headings": {
+        "project-edutrack": "Project: EduTrack"
       },
       "headingKeywords": {}
     },
