@@ -10,7 +10,7 @@
         "john-doe": "John Doe",
         "jane-doe": "Jane Doe",
         "johnny-doe": "Johnny Doe",
-        "jean-doe": "Jean Doe",
+        "wang-helin": "Wang Helin",
         "kota-sudarshan-karanth": "Kota Sudarshan Karanth"
       },
       "headingKeywords": {}
@@ -140,6 +140,14 @@
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/revdrag.md",
+      "title": "Wang Helin's Project Portfolio Page",
+      "headings": {
+        "project-edutrack": "Project: EduTrack"
       },
       "headingKeywords": {}
     },
