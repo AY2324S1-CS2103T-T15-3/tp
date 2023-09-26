@@ -8,7 +8,7 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "john-doe": "John Doe",
-        "jane-doe": "Jane Doe",
+        "donovan-chan-jia-jun": "Donovan Chan Jia Jun",
         "trinh-hoai-song-thu-sarah": "Trinh Hoai Song Thu (Sarah)",
         "wang-helin": "Wang Helin",
         "kota-sudarshan-karanth": "Kota Sudarshan Karanth"
@@ -123,6 +123,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/donovanjj.md",
+      "title": "Donovan Chan Jia Jun's Project Portfolio Page",
+      "headings": {
+        "project-edutrack": "Project: EduTrack"
       },
       "headingKeywords": {}
     },
