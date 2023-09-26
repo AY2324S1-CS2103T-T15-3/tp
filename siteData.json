@@ -9,7 +9,7 @@
         "project-team": "Project team",
         "john-doe": "John Doe",
         "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
+        "trinh-hoai-song-thu-sarah": "Trinh Hoai Song Thu (Sarah)",
         "wang-helin": "Wang Helin",
         "kota-sudarshan-karanth": "Kota Sudarshan Karanth"
       },
@@ -137,6 +137,14 @@
     {
       "src": "team/revdrag.md",
       "title": "Wang Helin's Project Portfolio Page",
+      "headings": {
+        "project-edutrack": "Project: EduTrack"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/songgthu.md",
+      "title": "Sarah's Project Portfolio Page",
       "headings": {
         "project-edutrack": "Project: EduTrack"
       },
