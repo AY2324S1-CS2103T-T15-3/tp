@@ -7,7 +7,7 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
-        "john-doe": "John Doe",
+        "sean-phua-zeng-kiat": "Sean Phua Zeng Kiat",
         "donovan-chan-jia-jun": "Donovan Chan Jia Jun",
         "trinh-hoai-song-thu-sarah": "Trinh Hoai Song Thu (Sarah)",
         "wang-helin": "Wang Helin",
@@ -112,6 +112,10 @@
         "quick-start": "Quick start",
         "features": "Features",
         "adding-a-class-add": "Adding a class : add",
+        "adding-a-list-of-students-add": "Adding a list of students : add",
+        "removing-a-student-remove": "Removing a student : remove",
+        "exiting-the-program-exit": "Exiting the program : exit",
+        "saving-the-data": "Saving the data",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
@@ -145,6 +149,14 @@
     {
       "src": "team/revdrag.md",
       "title": "Wang Helin's Project Portfolio Page",
+      "headings": {
+        "project-edutrack": "Project: EduTrack"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/seanpzk.md",
+      "title": "Sean Phua Zeng Kiat's Project Portfolio Page",
       "headings": {
         "project-edutrack": "Project: EduTrack"
       },
