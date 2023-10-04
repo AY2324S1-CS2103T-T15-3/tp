@@ -560,37 +560,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ---
 
-**Use case: Add a student**
-
-**MSS**
-
-1. User chooses to add a student to an existing class.
-2. User requests to add a new student to an existing class.
-3. EduTrack adds the student into the specified class.
-
-**Extensions**
-
-* 1a. Student name is not specified.
-    * 1a1. EduTrack informs user that the student name is empty.
-    
-      Use case ends.
-* 1b. Class name is not specified.
-    * 1b1. EduTrack informs user that the class name is empty.
-
-      Use case ends.
-* 2a. Student name already exists.
-    * 2a1. EduTrack informs user that student name already exists.
-    * 2a2. EduTrack terminates the request.
-
-      Use case ends.
-* 2b. Class does not exist.
-    * 2b1. EduTrack informs user that the class is not found.
-    * 2b2. EduTrack terminates the request.
-  
-      Use case ends.
-
----
-
 **Use case: Remove a student**
 
 **MSS**
