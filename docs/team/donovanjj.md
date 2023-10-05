@@ -29,10 +29,12 @@ Given below are my contributions to the project.
 
 * **Documentation**:
   * User Guide:
-    * **{To be added}**
-    * **{To be added}**
+    - Remove class
   * Developer Guide:
-    * **{To be added}**
+    - Remove class
+    - Update class note
+    - Add lesson to class schedule
+    - Removing lesson from class schedule
 
 * **Community**:
   * **{To add PR reviews}**
