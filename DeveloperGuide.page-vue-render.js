@@ -26,7 +26,7 @@ with(this){return _c('h2',{attrs:{"id":"design"}},[_c('strong',[_v("Design")]),_
 with(this){return _c('h3',{attrs:{"id":"architecture"}},[_v("Architecture"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#architecture","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_v("The "),_c('em',[_c('strong',[_v("Architecture Diagram")])]),_v(" given above explains the high-level design of the App.")])}
+with(this){return _c('p',[_v("The "),_c('strong',[_c('em',[_v("Architecture Diagram")])]),_v(" given above explains the high-level design of the App.")])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main components of the architecture")])])}
@@ -353,7 +353,7 @@ with(this){return _c('ol',[_c('li',[_v("User chooses to add a student to an exis
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("1a. Student name is not specified.\n"),_c('ul',[_c('li',[_c('p',[_v("1a1. EduTrack informs user that the student name is empty.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_v("1b. Class name is not specified.\n"),_c('ul',[_c('li',[_c('p',[_v("1b1. EduTrack informs user that the class name is empty.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_v("2a. Student name already exists.\n"),_c('ul',[_c('li',[_c('p',[_v("2a1. EduTrack informs user that student name already exists.")])]),_v(" "),_c('li',[_c('p',[_v("2a2. EduTrack terminates the request.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_v("2b. Class does not exist.\n"),_c('ul',[_c('li',[_c('p',[_v("2b1. EduTrack informs user that the class is not found.")])]),_v(" "),_c('li',[_c('p',[_v("2b2. EduTrack terminates the request.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. Student name is not specified.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1a1. EduTrack informs user that the student name is empty.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_c('p',[_v("1b. Class name is not specified.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1b1. EduTrack informs user that the class name is empty.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_c('p',[_v("2a. Student name already exists.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("2a1. EduTrack informs user that student name already exists.")])]),_v(" "),_c('li',[_c('p',[_v("2a2. EduTrack terminates the request.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_c('p',[_v("2b. Class does not exist.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("2b1. EduTrack informs user that the class is not found.")])]),_v(" "),_c('li',[_c('p',[_v("2b2. EduTrack terminates the request.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Remove a student")])])}
@@ -383,7 +383,7 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("User requests to modify an exist
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("1a. EduTrack detects that student or class does not exist.\n"),_c('ul',[_c('li',[_c('p',[_v("1a1. EduTrack informs the user that the student or the class does not exist.")])]),_v(" "),_c('li',[_c('p',[_v("1a2. EduTrack terminates the request.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. EduTrack detects that student or class does not exist.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1a1. EduTrack informs the user that the student or the class does not exist.")])]),_v(" "),_c('li',[_c('p',[_v("1a2. EduTrack terminates the request.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Use auto-save feature")])])}
@@ -452,6 +452,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Thu, 12 Oct 2023, 17:12:10 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Sat, 14 Oct 2023, 10:45:43 GMT+8]")])])])}
 }];
   
