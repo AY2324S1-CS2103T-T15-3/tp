@@ -1,0 +1,82 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+'https://plantuml.com/sequence-diagram
+
+box Logic LOGIC_COLOR_T1
+participant ":removeStudentCommand" as RemoveStudentCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "ModelManager:Model" as Model MODEL_COLOR
+participant ":EduTrack" as EduTrack MODEL_COLOR
+participant "sClass:Class" as Class MODEL_COLOR
+participant "sClassStudentList:List" as List MODEL_COLOR
+participant "s:Student" as Student MODEL_COLOR
+end box
+
+[-> RemoveStudentCommand : execute()
+activate RemoveStudentCommand
+
+RemoveStudentCommand --> Model : getClass(studentClassName)
+activate Model
+
+Model --> EduTrack : getClass(studentClassName)
+activate EduTrack
+
+EduTrack --> Model : sClass
+deactivate EduTrack
+
+Model --> RemoveStudentCommand : sClass
+deactivate Model
+
+RemoveStudentCommand --> Class : getStudentList()
+activate Class
+
+Class --> RemoveStudentCommand : sClassStudentList
+deactivate Class
+
+RemoveStudentCommand --> List : get(studentIndex)
+activate List
+
+List --> RemoveStudentCommand : s
+deactivate List
+
+RemoveStudentCommand --> Model : deleteStudentFromClass(s, sClass)
+activate Model
+
+Model --> Class : removeStudentFromClass(studentToBeRemoved)
+activate Class
+
+Class --> Model
+deactivate Class
+
+Model --> RemoveStudentCommand
+deactivate Model
+
+RemoveStudentCommand --> Model : deleteStudent(s)
+activate Model
+
+Model --> EduTrack : removeStudent(s)
+activate EduTrack
+
+EduTrack --> Model
+deactivate EduTrack
+
+Model --> RemoveStudentCommand
+deactivate Model
+
+RemoveStudentCommand --> Student : getName()
+activate Student
+
+Student --> RemoveStudentCommand : sName
+deactivate Student
+
+Student -[hidden]-> RemoveStudentCommand
+destroy Student
+
+[<-- RemoveStudentCommand
+deactivate RemoveStudentCommand
+
+@enduml

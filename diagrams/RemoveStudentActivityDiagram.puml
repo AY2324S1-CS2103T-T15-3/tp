@@ -1,0 +1,23 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+start
+:User executes command to remove a Student from Class by Index;
+
+'Since the beta syntax does not support placing the condition outside the
+'diamond we place it as the true branch instead.
+
+if () then ([Valid Index])
+    fork
+        :Remove Student from List of Students in Class;
+    fork again
+        : Remove Student from List of Students tracked by EduTrack;
+    end fork
+    :Save AddressBook;
+else ([else])
+    : Informs user that Index provided is invalid;
+endif
+stop
+
+@enduml
