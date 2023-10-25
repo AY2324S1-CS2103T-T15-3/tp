@@ -1,0 +1,19 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+
+start
+:User executes command to add a Class c;
+if () then ([valid class name])
+  if () then ([Class list contains c])
+      :Inform user that class already exists;
+    else ([else])
+      :Add Class c to the class list;
+    endif
+else ([else])
+    :Inform user that class name must be specified;
+endif
+:Save EduTrack;
+stop
+@enduml

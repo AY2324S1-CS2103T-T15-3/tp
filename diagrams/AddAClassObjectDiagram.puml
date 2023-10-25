@@ -1,0 +1,17 @@
+@startuml
+!define UNIQUE_STUDENT_LIST []
+!define CLASS_NOTE ""
+!define CLASS_SCHEDULE ""
+
+object "<u>classList:UniqueClassList</u>" as UniqueClassList
+
+object "<u>c:Class</u>" as Class {
+  className = "CS2103T"
+  students = UNIQUE_STUDENT_LIST
+  classMemo = CLASS_NOTE
+  classSchedule = CLASS_SCHEDULE
+}
+
+UniqueClassList -- Class
+
+@enduml

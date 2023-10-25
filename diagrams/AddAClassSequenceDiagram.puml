@@ -1,0 +1,72 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":EduTrackParser" as EduTrackParser LOGIC_COLOR
+participant ":AddClassCommandParser" as AddClassCommandParser LOGIC_COLOR
+participant "a:AddClassCommand" as AddClassCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("add /c cs2103t")
+activate LogicManager
+
+LogicManager -> EduTrackParser : parseCommand("add /c cs2103t")
+activate EduTrackParser
+
+create AddClassCommandParser
+EduTrackParser -> AddClassCommandParser
+activate AddClassCommandParser
+
+AddClassCommandParser --> EduTrackParser
+deactivate AddClassCommandParser
+
+EduTrackParser -> AddClassCommandParser : parse(" /c cs2103t")
+activate AddClassCommandParser
+
+create AddClassCommand
+AddClassCommandParser -> AddClassCommand
+activate AddClassCommand
+
+AddClassCommand --> AddClassCommandParser
+deactivate AddClassCommand
+
+AddClassCommandParser --> EduTrackParser
+deactivate AddClassCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+AddClassCommandParser -[hidden]-> EduTrackParser
+destroy AddClassCommandParser
+
+EduTrackParser --> LogicManager : a
+deactivate EduTrackParser
+
+LogicManager -> AddClassCommand : execute()
+activate AddClassCommand
+
+AddClassCommand -> Model : hasClass(c)
+activate Model
+AddClassCommand -> Model : addClass(c)
+
+
+Model --> AddClassCommand
+deactivate Model
+
+create CommandResult
+AddClassCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> AddClassCommand
+deactivate CommandResult
+
+AddClassCommand --> LogicManager : result
+deactivate AddClassCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml
