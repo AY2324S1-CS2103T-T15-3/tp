@@ -10,9 +10,10 @@ start
 
 if () then ([Valid Index])
     fork
-        :Remove Student from List of Students in Class;
+        :Remove Student from List\n of Students in Class;
+
     fork again
-        : Remove Student from List of Students tracked by EduTrack;
+        : Remove Student from List\n of Students tracked by EduTrack;
     end fork
     :Save AddressBook;
 else ([else])

@@ -9,10 +9,7 @@ participant ":CommandResult" as CommandResult LOGIC_COLOR
 end box
 
 box Model MODEL_COLOR_T1
-participant "ModelManager:Model" as Model MODEL_COLOR
-participant ":EduTrack" as EduTrack MODEL_COLOR
-participant "sClass:Class" as Class MODEL_COLOR
-participant "sClassStudentList:List" as List MODEL_COLOR
+participant ":Model" as Model MODEL_COLOR
 participant "s:Student" as Student MODEL_COLOR
 end box
 
@@ -22,47 +19,37 @@ activate RemoveStudentCommand
 RemoveStudentCommand --> Model : getClass(studentClassName)
 activate Model
 
-Model --> EduTrack : getClass(studentClassName)
-activate EduTrack
-
-EduTrack --> Model : sClass
-deactivate EduTrack
-
 Model --> RemoveStudentCommand : sClass
 deactivate Model
 
-RemoveStudentCommand --> Class : getStudentList()
-activate Class
+RemoveStudentCommand --> Model : getStudentList()
+activate Model
 
-Class --> RemoveStudentCommand : sClassStudentList
-deactivate Class
 
-RemoveStudentCommand --> List : get(studentIndex)
-activate List
+Model --> RemoveStudentCommand : sClassStudentList
+deactivate Model
 
-List --> RemoveStudentCommand : s
-deactivate List
+RemoveStudentCommand --> Model : get(studentIndex)
+activate Model
+
+Model --> Student : retrieves student
+activate Student
+
+Student --> Model
+deactivate Student
+
+Model --> RemoveStudentCommand : s
+deactivate Model
 
 RemoveStudentCommand --> Model : deleteStudentFromClass(s, sClass)
 activate Model
 
-Model --> Class : removeStudentFromClass(studentToBeRemoved)
-activate Class
-
-Class --> Model
-deactivate Class
 
 Model --> RemoveStudentCommand
 deactivate Model
 
 RemoveStudentCommand --> Model : deleteStudent(s)
 activate Model
-
-Model --> EduTrack : removeStudent(s)
-activate EduTrack
-
-EduTrack --> Model
-deactivate EduTrack
 
 Model --> RemoveStudentCommand
 deactivate Model

@@ -158,10 +158,10 @@ with(this){return _c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lan
 with(this){return _c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("studentClassName")]),_v(" - "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("ClassName")]),_v(" representing "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("sClass")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("sClassStudentList")]),_v(" - "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("List<Student>")]),_v(" in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("sClass")]),_v(" containing all its "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Student")])])}
+with(this){return _c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("sClassStudentList")]),_v(" - "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("UniqueStudentList")]),_v(" in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("sClass")]),_v(" containing all its "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Student")])])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("globalStudentList")]),_v(" - "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("List<Student>")]),_v(" in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("EduTrack")]),_v(" containing all "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Student")]),_v(" across all "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Class")]),_v(".")])}
+with(this){return _c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("globalStudentList")]),_v(" - "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("UniqueStudentList")]),_v(" in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("EduTrack")]),_v(" containing all "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Student")]),_v(" across all "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Class")]),_v(".")])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Walkthrough")])])}
@@ -518,6 +518,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Wed, 25 Oct 2023, 15:32:23 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Wed, 25 Oct 2023, 16:56:55 GMT+8]")])])])}
 }];
   
