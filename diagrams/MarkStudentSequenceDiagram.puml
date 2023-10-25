@@ -1,0 +1,88 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":MarkStudentPresentCommandParser" as MarkStudentPresentCommandParser LOGIC_COLOR
+participant "d:MarkStudentPresentCommand" as MarkStudentPresentCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("mark /s 1 /c CS2103T")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("mark /s 1 /c CS2103T")
+activate AddressBookParser
+
+create MarkStudentPresentCommandParser
+AddressBookParser -> MarkStudentPresentCommandParser
+activate MarkStudentPresentCommandParser
+
+MarkStudentPresentCommandParser --> AddressBookParser
+deactivate MarkStudentPresentCommandParser
+
+AddressBookParser -> MarkStudentPresentCommandParser : parse("/s 1 /c CS2103T")
+activate MarkStudentPresentCommandParser
+
+create MarkStudentPresentCommand
+MarkStudentPresentCommandParser -> MarkStudentPresentCommand
+activate MarkStudentPresentCommand
+
+MarkStudentPresentCommand --> MarkStudentPresentCommandParser : d
+deactivate MarkStudentPresentCommand
+
+MarkStudentPresentCommandParser --> AddressBookParser : d
+deactivate MarkStudentPresentCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+MarkStudentPresentCommandParser -[hidden]-> AddressBookParser
+destroy MarkStudentPresentCommandParser
+
+AddressBookParser --> LogicManager : d
+deactivate AddressBookParser
+
+LogicManager -> MarkStudentPresentCommand : execute()
+activate MarkStudentPresentCommand
+
+MarkStudentPresentCommand -> Model : getClass("CS2103T")
+activate Model
+
+Model --> MarkStudentPresentCommand : CS2103T
+deactivate Model
+
+MarkStudentPresentCommand -> Model : getStudentInClass(1, CS2103T)
+activate Model
+
+Model --> MarkStudentPresentCommand : Alice
+deactivate Model
+
+MarkStudentPresentCommand -> Model : duplicateStudent(Alice)
+activate Model
+
+Model --> MarkStudentPresentCommand : Alice_Duplicate
+deactivate Model
+
+MarkStudentPresentCommand -> Model : markStudentPresent(Alice, CS2103T, A_Duplicate)
+activate Model
+
+Model --> MarkStudentPresentCommand
+deactivate Model
+
+create CommandResult
+MarkStudentPresentCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> MarkStudentPresentCommand
+deactivate CommandResult
+
+MarkStudentPresentCommand --> LogicManager : result
+deactivate MarkStudentPresentCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

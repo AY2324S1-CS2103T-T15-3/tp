@@ -50,6 +50,7 @@
         "model-component": "Model component",
         "storage-component": "Storage component",
         "common-classes": "Common classes",
+        "mark-student-attendance": "Mark student attendance",
         "implementation": "Implementation",
         "remove-student-feature": "Remove Student feature",
         "add-a-class-feature": "Add a class feature",

@@ -1,0 +1,24 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+class Student as "<u>s:Student</u>"
+class DuplicateName as "<u>duplicateSName:Name</u>"
+class Name as "<u>sName:Name</u>"
+class Class as "<u>sClass:Class</u>"
+class ClassName as "<u>studentClassName:ClassName</u>"
+class ClassList as "<u>sClassStudentList:List<Student></u>"
+class EduTrackList as "<u>globalStudentList:List<Student></u>"
+class EduTrack as "<u>eduTrack:EduTrack</u>"
+class DuplicateStudent as "<u>duplicateS:Student</u>"
+
+EduTrack *--> EduTrackList
+ClassList o--> duplicateStudent
+EduTrackList o--> duplicateStudent
+Class *--> ClassName
+Class *--> ClassList
+Student *--> Name
+DuplicateStudent *--> DuplicateName
+@enduml
