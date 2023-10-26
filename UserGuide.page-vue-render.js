@@ -176,7 +176,7 @@ with(this){return _c('ul',[_c('li',[_v("CLASS_NAME is not case-sensitive")]),_v(
 with(this){return _c('p',[_c('strong',[_v("Examples:")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("Remove /s 1 /c CS2103T")])])}
+with(this){return _c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("remove /s 1 /c CS2103T")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Successful Output:")])])}
@@ -209,7 +209,7 @@ with(this){return _c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inl
 with(this){return _c('p',[_c('strong',[_v("Successful Output:")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("CS2103T started a new lesson!")])])}
+with(this){return _c('ul',[_c('li',[_v("CLASS_NAME started a new lesson!")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Unsuccessful Output:")])])}
@@ -263,6 +263,6 @@ with(this){return _c('h2',{attrs:{"id":"command-summary"}},[_v("Command summary"
 with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticClass:"markbind-table table table-bordered table-striped"},[_c('thead',[_c('tr',[_c('th',[_v("Action")]),_v(" "),_c('th',[_v("Format, Examples")])])]),_v(" "),_c('tbody',[_c('tr',[_c('td',[_c('strong',[_v("add")])]),_v(" "),_c('td',[_c('strong',[_v("Adding a class:")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Format:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("add /c CLASS_NAME")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Eg:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("add /c CS2103T")]),_v(" "),_c('br'),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Adding a student:")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Format:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("add /s STUDENT_NAME  /c CLASS_NAME")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Eg:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("add /s John /c CS2103T")]),_v(" "),_c('br'),_c('br'),_v(" "),_c('strong',[_v("Adding a list of students")]),_v(" "),_c('br'),_v(" Coming soon")])]),_v(" "),_c('tr',[_c('td',[_c('strong',[_v("remove")])]),_v(" "),_c('td',[_c('strong',[_v("Removing a class:")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Format:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("remove /c CLASS_NAME")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Eg:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("remove /c CS2103T")]),_v(" "),_c('br'),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Removing a student:")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Format:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("remove /s STUDENT_NAME  /c CLASS_NAME")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Eg:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("remove /s John /c CS2103T")])])]),_v(" "),_c('tr',[_c('td',[_c('strong',[_v("view")])]),_v(" "),_c('td',[_c('strong',[_v("Viewing a class:")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Format:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view /c CLASS_NAME")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Eg:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view CS2103T")])])]),_v(" "),_c('tr',[_c('td',[_c('strong',[_v("edit")])]),_v(" "),_c('td',[_c('strong',[_v("Editing a class:")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Format:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("edit /c CLASS_INDEX /n NEW_CLASS_NAME /m NEW_CLASS_MEMO /t NEW_CLASS_SCHEDULE")]),_v(" "),_c('br'),_v(" "),_c('strong',[_v("Eg:")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("edit /c 2 /m submit marking report")])])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Thu, 26 Oct 2023, 11:51:34 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Thu, 26 Oct 2023, 12:31:10 GMT+8]")])])])}
 }];
   

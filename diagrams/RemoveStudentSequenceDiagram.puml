@@ -1,4 +1,5 @@
 @startuml
+autonumber "<b>(##)"
 !include style.puml
 skinparam ArrowFontStyle plain
 'https://plantuml.com/sequence-diagram
@@ -16,22 +17,26 @@ end box
 [-> RemoveStudentCommand : execute()
 activate RemoveStudentCommand
 
-RemoveStudentCommand --> Model : getClass(studentClassName)
+RemoveStudentCommand --> Model : Get student's class
 activate Model
 
+autonumber stop
 Model --> RemoveStudentCommand : sClass
 deactivate Model
 
-RemoveStudentCommand --> Model : getStudentList()
+autonumber resume
+RemoveStudentCommand --> Model : Get list of students
 activate Model
 
-
+autonumber stop
 Model --> RemoveStudentCommand : sClassStudentList
 deactivate Model
 
-RemoveStudentCommand --> Model : get(studentIndex)
+autonumber resume
+RemoveStudentCommand --> Model : Get student
 activate Model
 
+autonumber stop
 Model --> Student : retrieves student
 activate Student
 
@@ -41,25 +46,31 @@ deactivate Student
 Model --> RemoveStudentCommand : s
 deactivate Model
 
-RemoveStudentCommand --> Model : deleteStudentFromClass(s, sClass)
+autonumber resume
+RemoveStudentCommand --> Model : Get student's name
 activate Model
 
+autonumber stop
+Model --> RemoveStudentCommand : sName
+deactivate Model
 
+autonumber resume
+RemoveStudentCommand --> Model : Delete student from class list
+activate Model
+
+autonumber stop
 Model --> RemoveStudentCommand
 deactivate Model
 
-RemoveStudentCommand --> Model : deleteStudent(s)
+autonumber resume
+RemoveStudentCommand --> Model : Delete student from EduTrack list
 activate Model
 
+autonumber stop
 Model --> RemoveStudentCommand
 deactivate Model
 
-RemoveStudentCommand --> Student : getName()
-activate Student
-
-Student --> RemoveStudentCommand : sName
-deactivate Student
-
+Student -[hidden]-> RemoveStudentCommand
 Student -[hidden]-> RemoveStudentCommand
 destroy Student
 
