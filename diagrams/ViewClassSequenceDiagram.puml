@@ -1,0 +1,61 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":ViewCommandParser" as ViewCommandParser LOGIC_COLOR
+participant "d:ViewCommand" as ViewCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("view /c 1")
+activate LogicManager
+
+LogicManager -> ViewCommandParser : parse("1")
+activate ViewCommandParser
+
+create ViewCommand
+ViewCommandParser -> ViewCommand
+activate ViewCommand
+
+ViewCommand --> ViewCommandParser : d
+deactivate ViewCommand
+
+ViewCommandParser --> LogicManager : d
+deactivate ViewCommandParser
+
+LogicManager -> ViewCommand : execute()
+activate ViewCommand
+
+ViewCommand -> Model : getClassByIndex(1)
+activate Model
+
+Model --> ViewCommand
+deactivate Model
+
+Model -> UniqueClassList : filter(predicate)
+activate UniqueClassList
+
+UniqueClassList --> Model
+deactivate UniqueClassList
+
+Model -> UniqueStudentList : filter(predicate)
+activate UniqueStudentList
+
+UniqueStudentList --> Model
+deactivate UniqueStudentList
+
+ViewCommand --> CommandResult : Success Message
+deactivate ViewCommand
+
+CommandResult --> LogicManager : result
+deactivate CommandResult
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

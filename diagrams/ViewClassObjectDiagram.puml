@@ -1,0 +1,21 @@
+@startuml
+class ViewCommand {
+  - classIndex: Index
+}
+class Model {
+  + updateFilteredClassList(Predicate<Class> predicate)
+  + updateFilteredStudentList(Predicate<Student> predicate)
+  + getClassByIndex(Index classIndex): Class
+}
+class Class {
+  + getStudentList(): List<Student>
+  + getClassName(): String
+}
+class Student {
+  // Student properties
+}
+ViewCommand --> Model: classIndex
+Model --> Class: getClassByIndex(classIndex)
+Model --> Class: updateFilteredClassList(predicate)
+Model --> Class: updateFilteredStudentList(predicate)
+@enduml
