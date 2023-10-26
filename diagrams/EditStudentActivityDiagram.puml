@@ -1,0 +1,24 @@
+@startuml
+
+start
+:User inputs edit student command;
+
+if () is ([Command is valid]) then
+  :Identify student to edit,
+  the class the student is from
+  and parameters to edit;
+  :Create edited Student with the parameters;
+  if () is ([Edited Student is valid]) then
+    :Replace old Student with edited Student;
+    :Model is updated with new list;
+  else ([else])
+    :UI shows error message;
+    stop
+  endif
+else ([else])
+  :UI shows invalid command format;
+endif
+
+stop
+
+@enduml
