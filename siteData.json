@@ -38,6 +38,7 @@
     },
     {
       "src": "DeveloperGuide.md",
+      "title": "Developer Guide",
       "headings": {
         "edutrack-developer-guide": "EduTrack Developer Guide",
         "acknowledgements": "Acknowledgements",
@@ -49,8 +50,8 @@
         "model-component": "Model component",
         "storage-component": "Storage component",
         "common-classes": "Common classes",
-        "mark-student-attendance": "Mark student attendance",
         "implementation": "Implementation",
+        "mark-student-attendance": "Mark student attendance",
         "edit-student-feature": "Edit Student feature",
         "remove-student-feature": "Remove Student feature",
         "view-class-feature": "View Class feature",
@@ -149,7 +150,7 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "edutrack": "EduTrack"
       },
       "headingKeywords": {}
     },
