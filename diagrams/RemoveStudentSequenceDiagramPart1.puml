@@ -1,0 +1,59 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":EduTrackParser" as EduTrackParser LOGIC_COLOR
+participant ":RemoveStudentCommandParser" as RemoveStudentCommandParser LOGIC_COLOR
+participant "cmd:RemoveStudentCommand" as RemoveStudentCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("remove /s 1 /c CS2103T")
+activate LogicManager
+
+LogicManager -> EduTrackParser : parseCommand("remove /s 1 /c CS2103T")
+activate EduTrackParser
+
+create RemoveStudentCommandParser
+EduTrackParser -> RemoveStudentCommandParser
+activate RemoveStudentCommandParser
+
+RemoveStudentCommandParser --> EduTrackParser
+deactivate RemoveStudentCommandParser
+
+EduTrackParser -> RemoveStudentCommandParser : parse("/s 1 /c CS2103T")
+activate RemoveStudentCommandParser
+
+create RemoveStudentCommand
+RemoveStudentCommandParser -> RemoveStudentCommand
+activate RemoveStudentCommand
+
+RemoveStudentCommand --> RemoveStudentCommandParser : cmd
+deactivate RemoveStudentCommand
+
+RemoveStudentCommandParser --> EduTrackParser : cmd
+deactivate RemoveStudentCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+RemoveStudentCommandParser -[hidden]-> EduTrackParser
+destroy RemoveStudentCommandParser
+
+EduTrackParser --> LogicManager : cmd
+deactivate EduTrackParser
+
+LogicManager -> RemoveStudentCommand : execute()
+activate RemoveStudentCommand
+
+ref over RemoveStudentCommand, CommandResult, Model : Execution of cmd
+
+RemoveStudentCommand --> LogicManager : result
+deactivate RemoveStudentCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

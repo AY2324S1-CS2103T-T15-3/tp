@@ -5,7 +5,7 @@ skinparam ArrowFontStyle plain
 'https://plantuml.com/sequence-diagram
 
 box Logic LOGIC_COLOR_T1
-participant ":removeStudentCommand" as RemoveStudentCommand LOGIC_COLOR
+participant "cmd:RemoveStudentCommand" as RemoveStudentCommand LOGIC_COLOR
 participant ":CommandResult" as CommandResult LOGIC_COLOR
 end box
 
@@ -70,11 +70,21 @@ autonumber stop
 Model --> RemoveStudentCommand
 deactivate Model
 
+autonumber resume
+RemoveStudentCommand --> CommandResult : Encapsulate results in CommandResult
+activate CommandResult
+
+autonumber stop
+CommandResult --> RemoveStudentCommand :
+deactivate CommandResult
+
 Student -[hidden]-> RemoveStudentCommand
 Student -[hidden]-> RemoveStudentCommand
 destroy Student
 
-[<-- RemoveStudentCommand
+autonumber resume
+
+[<-- RemoveStudentCommand : result
 deactivate RemoveStudentCommand
 
 @enduml
