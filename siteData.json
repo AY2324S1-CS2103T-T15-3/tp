@@ -67,7 +67,21 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person",
+        "list-all-classes": "List all classes",
+        "adding-a-class": "Adding a class",
+        "removing-a-class": "Removing a class",
+        "viewing-a-class": "Viewing a class",
+        "editing-a-class": "Editing a class",
+        "marking-a-student-present": "Marking a student present",
+        "marking-a-student-absent": "Marking a student absent",
+        "marking-all-students-in-a-class-present": "Marking all students in a class present",
+        "starting-a-lesson": "Starting a lesson",
+        "setting-number-of-lessons-of-a-class": "Setting number of lessons of a class",
+        "adding-a-student": "Adding a student",
+        "removing-a-student": "Removing a student",
+        "editing-a-student": "Editing a student",
+        "help": "Help",
+        "clear": "Clear",
         "saving-data": "Saving data",
         "appendix-planned-enhancements": "Appendix: Planned Enhancements"
       },
@@ -175,9 +189,7 @@
     {
       "src": "team/revdrag.md",
       "title": "Wang Helin's Project Portfolio Page",
-      "headings": {
-        "project-edutrack": "Project: EduTrack"
-      },
+      "headings": {},
       "headingKeywords": {}
     },
     {
