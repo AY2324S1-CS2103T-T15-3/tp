@@ -6,7 +6,8 @@ skinparam classBackgroundColor MODEL_COLOR
 
 class Student as "<u>s:Student</u>"
 class DuplicateName as "<u>duplicateSName:Name</u>"
-class Name as "<u>sName:Name</u>"
+class LessonCounter as "<u>sCurrentLessonStatus:CurrentLessonAttendance</u>"
+class LessonsAttended as "<u>sLessonsAttended:LessonsAttended</u>"
 class Class as "<u>sClass:Class</u>"
 class ClassName as "<u>studentClassName:ClassName</u>"
 class ClassList as "<u>sClassStudentList:List<Student></u>"
@@ -15,10 +16,11 @@ class EduTrack as "<u>eduTrack:EduTrack</u>"
 class DuplicateStudent as "<u>duplicateS:Student</u>"
 
 EduTrack *--> EduTrackList
-ClassList o--> duplicateStudent
-EduTrackList o--> duplicateStudent
+ClassList o--> Student
+EduTrackList o--> Student
 Class *--> ClassName
 Class *--> ClassList
-Student *--> Name
+Student *--> LessonCounter
+Student *--> LessonsAttended
 DuplicateStudent *--> DuplicateName
 @enduml
