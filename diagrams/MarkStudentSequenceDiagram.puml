@@ -4,7 +4,7 @@ skinparam ArrowFontStyle plain
 
 box Logic LOGIC_COLOR_T1
 participant ":LogicManager" as LogicManager LOGIC_COLOR
-participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":EduTrackParser" as EduTrackParser LOGIC_COLOR
 participant ":MarkStudentPresentCommandParser" as MarkStudentPresentCommandParser LOGIC_COLOR
 participant "d:MarkStudentPresentCommand" as MarkStudentPresentCommand LOGIC_COLOR
 participant ":CommandResult" as CommandResult LOGIC_COLOR
@@ -17,17 +17,17 @@ end box
 [-> LogicManager : execute("mark /s 1 /c CS2103T")
 activate LogicManager
 
-LogicManager -> AddressBookParser : parseCommand("mark /s 1 /c CS2103T")
-activate AddressBookParser
+LogicManager -> EduTrackParser : parseCommand("mark /s 1 /c CS2103T")
+activate EduTrackParser
 
 create MarkStudentPresentCommandParser
-AddressBookParser -> MarkStudentPresentCommandParser
+EduTrackParser -> MarkStudentPresentCommandParser
 activate MarkStudentPresentCommandParser
 
-MarkStudentPresentCommandParser --> AddressBookParser
+MarkStudentPresentCommandParser --> EduTrackParser
 deactivate MarkStudentPresentCommandParser
 
-AddressBookParser -> MarkStudentPresentCommandParser : parse("/s 1 /c CS2103T")
+EduTrackParser -> MarkStudentPresentCommandParser : parse("/s 1 /c CS2103T")
 activate MarkStudentPresentCommandParser
 
 create MarkStudentPresentCommand
@@ -37,14 +37,14 @@ activate MarkStudentPresentCommand
 MarkStudentPresentCommand --> MarkStudentPresentCommandParser : d
 deactivate MarkStudentPresentCommand
 
-MarkStudentPresentCommandParser --> AddressBookParser : d
+MarkStudentPresentCommandParser --> EduTrackParser : d
 deactivate MarkStudentPresentCommandParser
 'Hidden arrow to position the destroy marker below the end of the activation bar.
-MarkStudentPresentCommandParser -[hidden]-> AddressBookParser
+MarkStudentPresentCommandParser -[hidden]-> EduTrackParser
 destroy MarkStudentPresentCommandParser
 
-AddressBookParser --> LogicManager : d
-deactivate AddressBookParser
+EduTrackParser --> LogicManager : d
+deactivate EduTrackParser
 
 LogicManager -> MarkStudentPresentCommand : execute()
 activate MarkStudentPresentCommand
