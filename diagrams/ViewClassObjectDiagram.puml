@@ -1,21 +1,28 @@
 @startuml
-class ViewCommand {
-  - classIndex: Index
-}
-class Model {
-  + updateFilteredClassList(Predicate<Class> predicate)
-  + updateFilteredStudentList(Predicate<Student> predicate)
-  + getClassByIndex(Index classIndex): Class
-}
-class Class {
-  + getStudentList(): List<Student>
-  + getClassName(): String
-}
-class Student {
-  // Student properties
-}
-ViewCommand --> Model: classIndex
-Model --> Class: getClassByIndex(classIndex)
-Model --> Class: updateFilteredClassList(predicate)
-Model --> Class: updateFilteredStudentList(predicate)
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+class Student as "<u>s:Student</u>"
+class Name as "<u>sName:Name</u>"
+class Class as "<u>sClass:Class</u>"
+class ClassName as "<u>studentClassName:ClassName</u>"
+class ClassList as "<u>sClassStudentList:UniqueStudentList</u>"
+class EduTrackList as "<u>globalStudentList:UniqueStudentList</u>"
+class EduTrack as "<u>eduTrack:EduTrack</u>"
+class Index as "<u>classIndex:Index</u>"
+class Predicate as "<u>predicate:Predicate</u>"
+class CommandResult as "<u>commandResult:CommandResult</u>"
+
+EduTrack *--> EduTrackList
+ClassList o--> Student
+EduTrackList o--> Student
+Class *--> ClassName
+Class *--> ClassList
+Student *--> Name
+ViewCommand *--> Index
+ViewCommand *--> Predicate
+ViewCommand *--> CommandResult
+
 @enduml

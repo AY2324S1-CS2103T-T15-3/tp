@@ -2,18 +2,14 @@
 skin rose
 skinparam ActivityFontSize 15
 skinparam ArrowFontSize 12
+
 start
 :User executes command to view students in a class by Index;
-
-
 if () then ([Valid Index])
-    fork
-        :Get the Class object\n corresponding to the index;
-    fork again
-        :Update filtered class list;
-    end fork
-    :Update filtered student list\n displayed on UI;
+    :Get the Class object\n corresponding to the index;
+    :Update filtered class list;
     :Return CommandResult with success message;
+    :Update filtered student list\n displayed on UI;
 else ([Invalid Index])
     :Informs user that Index provided is invalid;
 endif
