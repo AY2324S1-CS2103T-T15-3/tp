@@ -189,7 +189,10 @@
     {
       "src": "team/revdrag.md",
       "title": "Wang Helin's Project Portfolio Page",
-      "headings": {},
+      "headings": {
+        "revdrag-s-project-porfolio-page": "revdrag's Project Porfolio Page",
+        "project-edutrack": "Project: EduTrack"
+      },
       "headingKeywords": {}
     },
     {
