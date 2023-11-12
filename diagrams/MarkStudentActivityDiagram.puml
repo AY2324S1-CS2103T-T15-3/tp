@@ -6,27 +6,23 @@ start
 :User executes command to
     mark student present;
 
-'Since the beta syntax does not support placing the condition outside the
-'diamond we place it as the true branch instead.
-
-if (Is provided index valid?) then (no)
+if () then ([Invalid index provided])
     : Inform user to put valid Index;
-elseif (Does the Class with that
-    class name exist?) then (no)
-    : Inform the user that
-     the class does not exist;
-else (Proceed with command)
-    : Creates a duplicate Student;
-    : Update the attendance of
-        the duplicate student;
-    fork
-        :Replace existing student with
-           duplicate student in Class;
-    fork again
-        : Replace existing student with
-        duplicate student in EduTrack;
-    end fork
-
+else ([else])
+    if () then ([Class with that class name exists])
+            : Creates a duplicate Student;
+            : Update the attendance of
+                the duplicate student;
+            fork
+                :Replace existing student with
+                   duplicate student in Class;
+            fork again
+                : Replace existing student with
+                duplicate student in EduTrack;
+            end fork
+    else ([else])
+        : Inform user that the class does not exist;
+    endif
 endif
 stop
 @enduml
