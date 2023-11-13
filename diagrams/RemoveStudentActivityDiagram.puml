@@ -15,7 +15,7 @@ if () then ([Valid Index])
     fork again
         : Remove Student from List\n of Students tracked by EduTrack;
     end fork
-    :Save AddressBook;
+    :Save EduTrack;
 else ([else])
     : Informs user that Index provided is invalid;
 endif
