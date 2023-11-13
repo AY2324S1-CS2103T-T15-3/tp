@@ -584,7 +584,7 @@ with(this){return _c('p',[_c('strong',[_v("Q")]),_v(": How do I save my data?"),
 with(this){return _c('h2',{attrs:{"id":"known-issues"}},[_v("Known issues"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#known-issues","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("When using multiple screens, if you move the application to a secondary screen, and later switch to using only the primary screen, the GUI will open off-screen. The remedy is to delete the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("preferences.json")]),_v(" file created by the application before running the application again.")]),_v(" "),_c('li',[_v("When attempting to view a long string of text, the text may be truncated with \"...\" at the end. The remedy is to resize the window to be larger if possible.")]),_v(" "),_c('li',[_v("When the window size is too small, the alignment of the columns when viewing a class may be off. The remedy is to resize the window to be larger if possible.")])])}
+with(this){return _c('ol',[_c('li',[_v("When using multiple screens, if you move the application to a secondary screen, and later switch to using only the primary screen, the GUI will open off-screen. The remedy is to delete the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("preferences.json")]),_v(" file created by the application before running the application again.")]),_v(" "),_c('li',[_v("When attempting to view a long string of text, the text may be truncated with \"...\" at the end. The remedy is to resize the window to a larger size, if possible.")]),_v(" "),_c('li',[_v("When the window size is too small, the alignment of the columns when viewing a class may be off. The remedy is to resize the window to be larger if possible.")])])}
 },function anonymous(
 ) {
 with(this){return _c('h2',{attrs:{"id":"command-summary"}},[_v("Command summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#command-summary","onclick":"event.stopPropagation()"}})])}
@@ -602,6 +602,6 @@ with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticC
 with(this){return _c('p',[_v("⬆️ "),_c('em',[_v("Return to "),_c('a',{attrs:{"href":"#table-of-contents"}},[_v("Table of Contents")])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Mon, 13 Nov 2023, 23:15:40 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Mon, 13 Nov 2023, 23:35:13 GMT+8]")])])])}
 }];
   

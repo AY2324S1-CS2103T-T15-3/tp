@@ -10,7 +10,7 @@ if () then ([Invalid index provided])
     : Inform user to put valid Index;
 else ([else])
     if () then ([Class with that class name exists])
-            : Creates a duplicate Student;
+            : Create a duplicate Student;
             : Update the attendance of
                 the duplicate student;
             fork
