@@ -52,22 +52,22 @@ activate MarkStudentPresentCommand
 MarkStudentPresentCommand -> Model : getClass("CS2103T")
 activate Model
 
-Model --> MarkStudentPresentCommand : CS2103T
+Model --> MarkStudentPresentCommand : sClass
 deactivate Model
 
 MarkStudentPresentCommand -> Model : getStudentInClass(1, CS2103T)
 activate Model
 
-Model --> MarkStudentPresentCommand : Alice
+Model --> MarkStudentPresentCommand : s
 deactivate Model
 
-MarkStudentPresentCommand -> Model : duplicateStudent(Alice)
+MarkStudentPresentCommand -> Model : duplicateStudent(s)
 activate Model
 
-Model --> MarkStudentPresentCommand : Alice_Duplicate
+Model --> MarkStudentPresentCommand : sDuplicate
 deactivate Model
 
-MarkStudentPresentCommand -> Model : markStudentPresent(Alice, CS2103T, A_Duplicate)
+MarkStudentPresentCommand -> Model : markPresent(sClass, s, sDuplicate)
 activate Model
 
 Model --> MarkStudentPresentCommand

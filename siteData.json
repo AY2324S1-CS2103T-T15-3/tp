@@ -51,7 +51,7 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "mark-student-attendance": "Mark student attendance",
+        "mark-student-s-attendance-as-present": "Mark student's attendance as present",
         "edit-student-feature": "Edit Student feature",
         "remove-student-feature": "Remove Student feature",
         "view-class-feature": "View Class feature",
