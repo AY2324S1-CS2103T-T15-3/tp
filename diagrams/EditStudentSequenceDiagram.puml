@@ -14,10 +14,10 @@
  participant ":Model" as Model MODEL_COLOR
  end box
 
- [-> LogicManager : execute("edit /s 1 /c CS2103T n/John")
+ [-> LogicManager : execute("edit /s 1 /c CS2103T /n John")
  activate LogicManager
 
- LogicManager -> EduTrackParser : parseCommand("edit /s 1 /c CS2103T n/John")
+ LogicManager -> EduTrackParser : parseCommand("edit /s 1 /c CS2103T /n John")
  activate EduTrackParser
 
  create EditStudentCommandParser
@@ -31,7 +31,7 @@
 
  deactivate EditStudentCommandParser
 
- EduTrackParser -> EditStudentCommandParser : parse("/s 1 /c CS2103T /nJohn")
+ EduTrackParser -> EditStudentCommandParser : parse("/s 1 /c CS2103T /n John")
  activate EditStudentCommandParser
 
  create EditStudentDescriptor
